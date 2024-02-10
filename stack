@@ -1,0 +1,36 @@
+//
+//  main.cpp
+//  Compilers
+//
+//  Created by Mustafa Ali on 07/02/2024.
+//
+#include <iostream>
+using namespace std;
+int main(int argc, const char * argv[]) {
+int stackSize = 5; int stack[stackSize]; int index = 1;
+bool activated = true;
+    string operation;
+while (activated == true) {
+cout << "Choose an operation: 1. Push (pu) 2. Pop (po)
+3. Exit (ex)";
+        cin >> operation;
+if (operation == "pu") {
+if (index <= stackSize) { cin >> stack[index]; index++;
+} else {
+                cout << "The stack is full." << endl;
+            }
+}
+else if (operation == "po") {
+if (index > 1) { index--;
+                cout << stack[index] << endl;
+} else {
+                cout << "The stack is empty." << endl;
+            }
+}
+else if (operation == "ex") {
+activated = false; }
+else {
+cout << "Invalide operation input" << endl;
+        }
+}
+return 0; }
